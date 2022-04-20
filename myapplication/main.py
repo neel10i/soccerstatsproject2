@@ -48,6 +48,18 @@ def guestPage():
     if request.method == 'POST':
         if request.form.get('Man City') == 'Man City':
             return redirect(url_for('manCity'))
+
+        if request.form.get('PSG') == 'PSG':
+            return redirect(url_for('psg'))
+        
+        if request.form.get('Liverpool') == 'Liverpool':
+            return redirect(url_for('liverpool'))
+        
+        if request.form.get('Barcelona') == 'Barcelona':
+            return redirect(url_for('barcelona'))
+        
+        if request.form.get('Man United') == 'Man United':
+            return redirect(url_for('manchesterunited'))
         
     return render_template("guest.html")
 
@@ -59,6 +71,42 @@ def manCity():
     if users > 0:
         userDetails = cur.fetchall()
         return render_template("mancity.html",userDetails = userDetails)
+
+@app.route('/psg')
+def psg():
+    cur = mysql.connection.cursor()
+    users = cur.execute("SELECT * FROM playersPSG")
+    #users = cur.execute("SELECT * FROM soccer_clubs")
+    if users > 0:
+        userDetails = cur.fetchall()
+        return render_template("psg.html",userDetails = userDetails)
+
+@app.route('/liverpool')
+def liverpool():
+    cur = mysql.connection.cursor()
+    users = cur.execute("SELECT * FROM playersLiverpool")
+    #users = cur.execute("SELECT * FROM soccer_clubs")
+    if users > 0:
+        userDetails = cur.fetchall()
+        return render_template("liverpool.html",userDetails = userDetails)
+
+@app.route('/barcelona')
+def barcelona():
+    cur = mysql.connection.cursor()
+    users = cur.execute("SELECT * FROM playersFCB")
+    #users = cur.execute("SELECT * FROM soccer_clubs")
+    if users > 0:
+        userDetails = cur.fetchall()
+        return render_template("barcelona.html",userDetails = userDetails)
+
+@app.route('/manchesterunited')
+def manchesterunited():
+    cur = mysql.connection.cursor()
+    users = cur.execute("SELECT * FROM playersUnited")
+    #users = cur.execute("SELECT * FROM soccer_clubs")
+    if users > 0:
+        userDetails = cur.fetchall()
+        return render_template("manunited.html",userDetails = userDetails)
 
 #LOGIN SYSTEM - CHECKING THE USERNAME AND PASSWORD
 @app.route('/login')
