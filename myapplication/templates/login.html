@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static\login.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="rectangle"></div>
+    <h1 class="admin1">Enter Login Below</h1>
+    
+    <form method="post" action="/login">
+        <input class="login" type="text" id="login" name="login" placeholder="enter the username">
+        <input class="password" type="text" id="password" name="password" placeholder="enter the password">
+        <button class="submit" style="width:292px;height:30px;" type="submit" value="submit" name="submit">submit</button>
+    </form>
+</body>
+</html>
