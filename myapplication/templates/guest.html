@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static\guest.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <div class="header">
+        <h1>Guest Page - Select a Team</h1>
+    </div>
+
+    <h1 class="text1">Select a Team Using the Buttons Below </h1>
+    <form method="post" action="/guest">
+        <input type="submit" class="mc-button" value="Man City" name="Man City"/>
+        <input type="submit" class="psg-button" value="PSG" name="PSG"/>
+    </form>
+
+</body>
+</html>
