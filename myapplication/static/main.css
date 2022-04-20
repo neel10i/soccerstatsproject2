@@ -1,1 +1,91 @@
+body {background-color: rgb(0, 0, 0);}
 
+.header {
+  font-family: 'Roboto', sans-serif;
+  padding: 1px;
+  text-align: center;
+  background: linear-gradient(#4CB8C4 , #3CD3AD);
+  color: rgb(0, 0, 0);
+  font-size: 8px;
+}
+
+.text1 {
+    /* top: 150px; left: 40px; */
+    position: fixed;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    white-space: pre-wrap;
+    line-height: 70px;
+    font-size: 56px;
+    background: linear-gradient(#4CB8C4 , #3CD3AD);
+    background-clip : text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.paragraph{
+    letter-spacing: 1.5px;
+    position: fixed;
+    top: 48.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    line-height: 70px;
+    font-size: 28px;
+    background: linear-gradient(#4CB8C4 , #3CD3AD);
+    background-clip : text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.admin-button {
+  background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)
+}
+.admin-button {
+  font-family: 'Roboto', sans-serif;
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(0, 0, 0);            
+  border-radius: 10px;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 40%;
+}
+
+.admin-button:hover {
+  background-position: right center; /* change the direction of the change here */
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+.guest-button {
+  background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)
+}
+.guest-button {
+  font-family: 'Roboto', sans-serif;
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: rgb(0, 0, 0);            
+  border-radius: 10px;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.guest-button:hover {
+  background-position: right center;
+  text-decoration: none;
+  transform: scale(1.05);
+}
