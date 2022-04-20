@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static\admin.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+</head>
+<body>
+
+    <div class="header">
+        <h1>Admin Page - View All Entries</h1>
+    </div>
+
+    <h1 class="text1">Teams In System</h1>
+    <h1 class="text2">Players In System</h1>
+
+    <table class="teamTable">
+        <tr>
+            <th>Club Name</th>
+            <th>Year Founded</th>
+            <th>Current League</th>
+            <th>League Titles</th>
+            <th>Champions League Titles</th>
+            <th>Current League Record</th>
+        </tr>
+        <tr>
+            <td>MC</td>
+            <td>1900</td>
+            <td>PL</td>
+            <td>5</td>
+            <td>6</td>
+            <td>20-3-5</td>
+        </tr>
+
+        <tr>
+            <td>LP</td>
+            <td>1902</td>
+            <td>PL</td>
+            <td>7</td>
+            <td>3</td>
+            <td>26-3-5</td>
+        </tr>
+
+        <tr>
+            <td>FCB</td>
+            <td>1802</td>
+            <td>LL</td>
+            <td>10</td>
+            <td>34</td>
+            <td>26-3-7</td>
+        </tr>
+
+        <tr>
+            <td>MU</td>
+            <td>1802</td>
+            <td>LL</td>
+            <td>10</td>
+            <td>34</td>
+            <td>26-3-7</td>
+        </tr>
+
+        <tr>
+            <td>Chelsea</td>
+            <td>1802</td>
+            <td>LL</td>
+            <td>10</td>
+            <td>34</td>
+            <td>26-3-7</td>
+        </tr>
+
+        <tr>
+            <td>PSG</td>
+            <td>1802</td>
+            <td>LL</td>
+            <td>10</td>
+            <td>34</td>
+            <td>26-3-7</td>
+        </tr>
+
+    <table>
+
+    <table class="playerTable">
+        <tr>
+            <th>Player Name</th>
+            <th>Player Team</th>
+            <th>Player Position</th>
+            <th>Total Goals</th>
+            <th> Total Assists</th>
+            <th>Team Trophies</th>
+            <th>Individual Awards</th>
+        </tr>
+        {% for user in userDetails %}
+        <tr>
+            <td class = "user1">{{user[1]}}</td>
+            <td>{{user[2]}}</td>
+            <td>{{user[3]}}</td>
+            <td>{{user[4]}}</td>
+            <td>{{user[5]}}</td>
+            <td>{{user[6]}}</td>
+            <td>{{user[7]}}</td>
+        </tr>
+        {% endfor %}
+    <table>
+</body>
+</html>
