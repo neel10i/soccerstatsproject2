@@ -1,0 +1,22 @@
+<table class="playerTable">
+    <tr>
+        <th>Player Name</th>
+        <th>Player Team</th>
+        <th>Player Position</th>
+        <th>Total Goals</th>
+        <th> Total Assists</th>
+        <th>Team Trophies</th>
+        <th>Individual Awards</th>
+    </tr>
+    {% for user in userDetails %}
+    <tr>
+        <td class = "user1">{{user[1]}}</td>
+        <td>{{user[2]}}</td>
+        <td>{{user[3]}}</td>
+        <td>{{user[4]}}</td>
+        <td>{{user[5]}}</td>
+        <td>{{user[6]}}</td>
+        <td>{{user[7]}}</td>
+    </tr>
+    {% endfor %}
+<table>
