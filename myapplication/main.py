@@ -1,5 +1,3 @@
-# Importing flask module in the project is mandatory
-# An object of Flask class is our WSGI application.
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -8,12 +6,8 @@ from flask import url_for
 from flask import flash
 
 from flask_mysqldb import MySQL
-#from flask.ext.mysq import MySQL
-from flask_restful import Resource, Api
 import yaml
   
-# Flask constructor takes the name of 
-# current module (__name__) as argument.
 app = Flask(__name__)
 
 db = yaml.load(open('db.yaml'))
@@ -21,24 +15,17 @@ app.config['MYSQL_HOST'] = db['mysql_host']
 app.config['MYSQL_USER'] = db['mysql_user']
 app.config['MYSQL_PASSWORD'] = db['mysql_password']
 app.config['MYSQL_DB'] = db['mysql_db']
-app.config['SECRET_KEY'] = "test"
 
 mysql = MySQL(app)
 
-# The route() function of the Flask class is a decorator, 
-# which tells the application which URL should call 
-# the associated function.
 @app.route('/', methods=['GET', 'POST'])
-# ‘/’ URL is bound with hello_world() function.
+
 def index():
-    print(request.method)
     if request.method == 'POST':
         if request.form.get('Admin') == 'Admin':
             return redirect(url_for('loginPage'))
-
         elif request.form.get('Guest') == 'Guest':
             return redirect(url_for('guestPage'))
-
     return render_template("index.html")
 
 
@@ -67,7 +54,7 @@ def guestPage():
 def manCity():
     cur = mysql.connection.cursor()
     users = cur.execute("SELECT * FROM playersCity")
-    #users = cur.execute("SELECT * FROM soccer_clubs")
+    
     if users > 0:
         userDetails = cur.fetchall()
         return render_template("mancity.html",userDetails = userDetails)
@@ -76,7 +63,7 @@ def manCity():
 def psg():
     cur = mysql.connection.cursor()
     users = cur.execute("SELECT * FROM playersPSG")
-    #users = cur.execute("SELECT * FROM soccer_clubs")
+    
     if users > 0:
         userDetails = cur.fetchall()
         return render_template("psg.html",userDetails = userDetails)
@@ -85,7 +72,7 @@ def psg():
 def liverpool():
     cur = mysql.connection.cursor()
     users = cur.execute("SELECT * FROM playersLiverpool")
-    #users = cur.execute("SELECT * FROM soccer_clubs")
+
     if users > 0:
         userDetails = cur.fetchall()
         return render_template("liverpool.html",userDetails = userDetails)
@@ -94,7 +81,7 @@ def liverpool():
 def barcelona():
     cur = mysql.connection.cursor()
     users = cur.execute("SELECT * FROM playersFCB")
-    #users = cur.execute("SELECT * FROM soccer_clubs")
+
     if users > 0:
         userDetails = cur.fetchall()
         return render_template("barcelona.html",userDetails = userDetails)
@@ -103,7 +90,7 @@ def barcelona():
 def manchesterunited():
     cur = mysql.connection.cursor()
     users = cur.execute("SELECT * FROM playersUnited")
-    #users = cur.execute("SELECT * FROM soccer_clubs")
+
     if users > 0:
         userDetails = cur.fetchall()
         return render_template("manunited.html",userDetails = userDetails)
@@ -132,16 +119,56 @@ def checkLogin():
 @app.route('/admin', methods=['GET', 'POST'])
 def adminPage():
     cur = mysql.connection.cursor()
-    users = cur.execute("SELECT * FROM playersLiverpool UNION ALL SELECT * FROM playersCity")
-    #users = cur.execute("SELECT * FROM soccer_clubs")
+    users = cur.execute("SELECT * FROM playersLiverpool UNION ALL SELECT * FROM playersCity UNION ALL SELECT * FROM playersPSG UNION ALL SELECT * FROM playersFCB")
+
     if users > 0:
         userDetails = cur.fetchall()
         return render_template("admin.html",userDetails = userDetails)
 
 @app.route('/postadmin', methods=['GET', 'POST'])
 def postAdmin():
-    if request.method =="POST":
-        return render_template("postadmin.html")
+    if request.method == 'POST':
+        userDetails = request.form
+
+        playerName = userDetails['playerName']
+        playerTeam  = userDetails['playerTeam']
+        playerPosition = userDetails['playerPosition']
+        totalGoals = userDetails['totalGoals']
+        totalAssists = userDetails['totalAssists']
+        teamTrophies = userDetails['teamTrophies']
+
+        cur = mysql.connection.cursor()
+        if request.form.get('playerTeam') == 'Manchester City':
+            cur.execute("INSERT INTO playersCity(playerName, playerTeam, playerPosition, totalGoals, totalAssists, teamTrophies) VALUES(%s, %s, %s, %s, %s, %s)",(playerName, playerTeam, playerPosition, totalGoals, totalAssists, teamTrophies))
+            mysql.connection.commit()
+            cur.close()
+            return redirect(url_for('manCity'))
+        
+        if request.form.get('playerTeam') == 'Manchester United':
+            cur.execute("INSERT INTO playersUnited(playerName, playerTeam, playerPosition, totalGoals, totalAssists, teamTrophies) VALUES(%s, %s, %s, %s, %s, %s)",(playerName, playerTeam, playerPosition, totalGoals, totalAssists, teamTrophies))
+            mysql.connection.commit()
+            cur.close()
+            return redirect(url_for('manchesterunited'))
+        
+        if request.form.get('playerTeam') == 'Liverpool':
+            cur.execute("INSERT INTO playersLiverpool(playerName, playerTeam, playerPosition, totalGoals, totalAssists, teamTrophies) VALUES(%s, %s, %s, %s, %s, %s)",(playerName, playerTeam, playerPosition, totalGoals, totalAssists, teamTrophies))
+            mysql.connection.commit()
+            cur.close()
+            return redirect(url_for('liverpool'))
+        
+        if request.form.get('playerTeam') == 'PSG':
+            cur.execute("INSERT INTO playersPSG(playerName, playerTeam, playerPosition, totalGoals, totalAssists, teamTrophies) VALUES(%s, %s, %s, %s, %s, %s)",(playerName, playerTeam, playerPosition, totalGoals, totalAssists, teamTrophies))
+            mysql.connection.commit()
+            cur.close()
+            return redirect(url_for('psg'))
+
+        if request.form.get('playerTeam') == 'FC Barcelona':
+            cur.execute("INSERT INTO playersFCB(playerName, playerTeam, playerPosition, totalGoals, totalAssists, teamTrophies) VALUES(%s, %s, %s, %s, %s, %s)",(playerName, playerTeam, playerPosition, totalGoals, totalAssists, teamTrophies))
+            mysql.connection.commit()
+            cur.close()
+            return redirect(url_for('barcelona'))
+
+    return render_template('postadmin.html')  
 
 # main driver function
 if __name__ == '__main__':
