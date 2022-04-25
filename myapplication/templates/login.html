@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- setting the required refereneces and stylesheets -->
     <link rel="stylesheet" href="static\login.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -9,10 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="rectangle"></div>
+    <!-- creating an empty div which is a rectangle for backdrop when the user is entering username/password values-->
+    <div class="rectangle">
+
+    </div>
+    <!-- h1 tag which tells the user that they can login below-->
     <h1 class="admin1">Enter Login Below</h1>
-    
+   
+    <!-- form with the method post and at the route /login -->
     <form method="post" action="/login">
+        <!-- contains two inputs login and password, and a button which is a submit button-->
         <input class="login" type="text" id="login" name="login" placeholder="enter the username">
         <input class="password" type="text" id="password" name="password" placeholder="enter the password">
         <button class="submit" style="width:292px;height:30px;" type="submit" value="submit" name="submit">submit</button>
