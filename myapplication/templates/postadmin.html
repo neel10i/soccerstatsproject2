@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- setting the required refereneces and stylesheets -->
+    <link rel="stylesheet" href="static\postadmin.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
@@ -8,10 +10,25 @@
 
 </head>
 <body>
+    <!-- creating a class called header which contains a h1 tag-->
+    <div class="header">
+        <h1>Admin Page - Add Entries</h1>
+    </div>
+
+    <!-- h1 tag with class admin1 -->
+    <h1 class="admin1">ADD PLAYERS TO SYSTEM</h1>
+
+    <!-- creating a form with the method post and route /postadmin -->
     <form method="post" action="/postadmin">
-        <input type="text" id="fname" name="fname" placeholder="player name"><br>
-        <input type="text" id="lname" name="lname" placeholder="player team"><br>
-        <input type="submit" value="Submit">
+        <!-- six different input tags - represting the six different columns in each players table -->
+        <input class="name" type="text" id="playerName" name="playerName" placeholder="player name"><br>
+        <input class="team" type="text" id="playerTeam" name="playerTeam" placeholder="player team"><br>
+        <input class="position" type="text" id="playerPosition" name="playerPosition" placeholder="player position"><br>
+        <input class="goals" type="text" id="totalGoals" name="totalGoals" placeholder="total goals"><br>
+        <input class="assists" type="text" id="totalAssists" name="totalAssists" placeholder="total assists"><br>
+        <input class="trophies" type="text" id="teamTrophies" name="teamTrophies" placeholder="team trophies"><br>
+        <!-- submit button -->
+        <input class="submit" type="submit" value="Add Player" name="Add PLayer">
       </form> 
 </body>
 </html>
