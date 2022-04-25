@@ -40,6 +40,40 @@ body {
     overflow:auto;
   }
 
+/* assigning properties to the text1 class */
+.text1 {
+  /* top: 150px; left: 40px; */
+  position: fixed;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Roboto', sans-serif;
+  white-space: pre-wrap;
+  line-height: 70px;
+  font-size: 36px;
+  background: linear-gradient(#4CB8C4 , #3CD3AD);
+  background-clip : text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* assigning properties to the text1 class */
+.text2 {
+  /* top: 150px; left: 40px; */
+  position: fixed;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Roboto', sans-serif;
+  white-space: pre-wrap;
+  line-height: 70px;
+  font-size: 36px;
+  background: linear-gradient(#4CB8C4 , #3CD3AD);
+  background-clip : text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
   th {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(#4CB8C4 , #3CD3AD);
@@ -52,3 +86,23 @@ body {
     border: 1px solid black;
     padding: 5px;
   }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
