@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- setting the required refereneces and stylesheets -->
     <link rel="stylesheet" href="static\guest.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,14 +12,22 @@
 </head>
 <body>
 
+    <!-- creating a class called header which contains a h1 tag-->
     <div class="header">
         <h1>Guest Page - Select a Team</h1>
     </div>
 
+    <!-- h1 tag -->
     <h1 class="text1">Select a Team Using the Buttons Below </h1>
+
+    <!-- creating a form with the method post and route guest-->  
+    <!-- contains five different buttons which are of type submit -->
     <form method="post" action="/guest">
         <input type="submit" class="mc-button" value="Man City" name="Man City"/>
+        <input type="submit" class="lp-button" value="Liverpool" name="Liverpool"/>
         <input type="submit" class="psg-button" value="PSG" name="PSG"/>
+        <input type="submit" class="mu-button" value="Man United" name="Man United"/>
+        <input type="submit" class="fcb-button" value="Barcelona" name="Barcelona"/>
     </form>
 
 </body>
