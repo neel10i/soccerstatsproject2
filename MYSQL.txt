@@ -1,0 +1,98 @@
+SHOW DATABASES;
+USE soccerdatabase;
+SHOW TABLES;
+
+CREATE table soccer_clubs (
+    id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    clubName TEXT,
+    yearFounded INTEGER,
+    currentLeague TEXT,
+    leagueTitles INTEGER,
+    championsLeagueTitles INTEGER,
+    currentLeagueRecord CHAR(255)
+);
+
+CREATE table playersCity (
+    id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    playerName TEXT,
+    playerTeam TEXT,
+    playerPosition TEXT,
+    totalGoals INTEGER,
+    totalAssists INTEGER,
+    teamTrophies INTEGER
+);
+
+CREATE table playersLiverpool (
+    id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    playerName TEXT,
+    playerTeam TEXT,
+    playerPosition TEXT,
+    totalGoals INTEGER,
+    totalAssists INTEGER,
+    teamTrophies INTEGER
+);
+
+CREATE table playersPSG (
+    id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    playerName TEXT,
+    playerTeam TEXT,
+    playerPosition TEXT,
+    totalGoals INTEGER,
+    totalAssists INTEGER,
+    teamTrophies INTEGER
+);
+
+CREATE table playersUnited (
+    id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    playerName TEXT,
+    playerTeam TEXT,
+    playerPosition TEXT,
+    totalGoals INTEGER,
+    totalAssists INTEGER,
+    teamTrophies INTEGER
+);
+
+CREATE table playersFCB (
+    id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    playerName TEXT,
+    playerTeam TEXT,
+    playerPosition TEXT,
+    totalGoals INTEGER,
+    totalAssists INTEGER,
+    teamTrophies INTEGER
+);
+
+
+INSERT INTO soccer_clubs VALUES (NULL, 'Manchester City', 1880, 'Premier League', 5, 0, '22-4-3');
+INSERT INTO soccer_clubs VALUES (NULL, 'Liverpool', 1892, 'Premier League', 19, 5, '21-6-2');
+INSERT INTO soccer_clubs VALUES (NULL, 'FC Barcelona', 1899, 'LaLiga', 26, 3, '15-9-4');
+INSERT INTO soccer_clubs VALUES (NULL, 'Manchester United', 1878, 'Premier League', 13, 3, '14-8-7');
+INSERT INTO soccer_clubs VALUES (NULL, 'Chelsea', 1905, 'Premier League', 5, 2, '17-8-3');
+INSERT INTO soccer_clubs VALUES (NULL, 'Paris Saint-Germain', 1970, 'Ligue 1', 9, 0, '20-5-4');
+
+INSERT INTO playersCity VALUES (NULL, 'Kevin De Bruyne', 'Man City', 'Attacking Midfield', 128, 199, 15);
+INSERT INTO playersCity VALUES (NULL, 'Phil Foden', 'Man City', 'Central Midfielder', 42, 31, 10);
+INSERT INTO playersCity VALUES (NULL, 'João Cancelo', 'Man City' , 'Right-Back', 15, 52, 11);
+INSERT INTO playersCity VALUES (NULL, 'Rúben Dias', 'Man City' , 'Centre-Back', 15, 12, 5);
+
+INSERT INTO playersLiverpool VALUES (NULL, 'Mohamed Salah', 'Liverpool', 'Right Winger', 232, 112, 8);
+INSERT INTO playersLiverpool VALUES (NULL, 'Sadio Mané', 'Liverpool', 'Left Winger', 188, 93, 10);
+INSERT INTO playersLiverpool VALUES (NULL, 'Roberto Firmino', 'Liverpool', 'Centre-Forward', 155, 109, 6);
+
+INSERT INTO playersPSG VALUES (NULL, 'Lionel Messi', 'PSG', 'Right Winger', 1, 9, 5);
+INSERT INTO playersPSG VALUES (NULL, 'Kylian Mbappé', 'PSG', 'Centre-Forward', 197, 101, 14);
+INSERT INTO playersPSG VALUES (NULL, 'Neymar', 'PSG', 'Left Winger', 273, 170, 24);
+
+INSERT INTO playersFCB VALUES (NULL, 'Sergio Busquets', 'FCB', 'Defensive Mid', 17, 42, 33);
+INSERT INTO playersFCB VALUES (NULL, 'Frenkie de Jong', 'FCB', 'Central Mid', 33, 43, 3);
+
+INSERT INTO playersUnited VALUES (NULL, 'Cristiano Ronaldo', 'Man United', 'Centre-Forward', 696, 231, 34);
+INSERT INTO playersUnited VALUES (NULL, 'Jadon Sancho', 'Man United', 'Left Winger', 79, 78, 2);
+INSERT INTO playersUnited VALUES (NULL, 'Raphaël Varane', 'Man United' , 'Centre-Back', 19, 8, 19);
+
+SELECT * FROM playersCity;
+SELECT * FROM playersLiverpool;
+SELECT * FROM playersPSG;
+SELECT * FROM playersFCB;
+SELECT * FROM playersUnited;
+SELECT * FROM soccer_clubs;
