@@ -36,9 +36,14 @@ body {background-color: rgb(0, 0, 0);
     overflow: hidden;
 }
 
+/* setting the color of the button class mc-button */
 .mc-button {
     background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)
   }
+
+/* assigning properties to the class called mc-button */
+
+/* rest of buttons are the same css - just different locations */
   .mc-button {
     font-family: 'Roboto', sans-serif;
     margin: 10px;
@@ -72,4 +77,61 @@ body {background-color: rgb(0, 0, 0);
     position: fixed;
     top: 50%;
     left: 70.5%;
+  }
+
+  .lp-button {
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)
+  }
+  .lp-button {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(0, 0, 0);            
+    border-radius: 10px;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 58.5%;
+  }
+
+  .mu-button {
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)
+  }
+  .mu-button {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(0, 0, 0);            
+    border-radius: 10px;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 45.5%;
+  }
+
+  .fcb-button {
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)
+  }
+  .fcb-button {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    padding: 10px 18px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(0, 0, 0);            
+    border-radius: 10px;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 33.5%;
   }
