@@ -1,7 +1,8 @@
+/* setting the color of the background */
 body {
     background-color: rgb(0, 0, 0);
   }
-
+/* assigns properties to the header - font, padding, text location, background color, text color, font size */
   .header {
     font-family: 'Roboto', sans-serif;
     padding: 1px;
@@ -11,6 +12,7 @@ body {
     font-size: 8px;
   }
 
+  /* assigning properties to the playerTable class */
 .playerTable {
     font-family: 'Roboto', sans-serif;
     color: rgb(255, 255, 255);
@@ -20,10 +22,11 @@ body {
     border-width: 1px;
     position: absolute;
     top: 70%;
-    left: 13%;
+    left: 18%;
     overflow:auto;
   }
 
+  /* assigning properties to the teamTable class */
   .teamTable {
     font-family: 'Roboto', sans-serif;
     color: rgb(255, 255, 255);
@@ -32,7 +35,7 @@ body {
     border-color: #4CB8C4;
     border-width: 1px;
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 18%;
     overflow:auto;
   }
