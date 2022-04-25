@@ -1,5 +1,7 @@
 body {background-color: rgb(0, 0, 0);}
 
+
+/* assigning properties to the admin1 (text) class */
 .admin1 {
     /* top: 150px; left: 40px; */
     position: fixed;
@@ -20,6 +22,12 @@ input{
     text-align:center;
   }
 
+  /* when the user types values into the textbox - makes it so the bg stays the same color*/
+input:focus{
+    background-color: transparent; /* or any other color you want when user starts typing in input */
+}
+
+/* assigning properties to the login class - textbox */
 .login {
     font-family: 'Roboto', sans-serif;
     margin: 10px;
@@ -37,6 +45,7 @@ input{
     left: 40%;
 }
 
+/* assigning properties to the password class - textbox */
 .password {
     font-family: 'Roboto', sans-serif;
     margin: 10px;
@@ -53,6 +62,8 @@ input{
     top: 49.25%;
     left: 40%;
 }
+
+/* assigning properties to the submitclass - submit button*/
 .submit{
     background-size: 200% auto;
     background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%); 
