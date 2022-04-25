@@ -1,0 +1,193 @@
+body {background-color: rgb(0, 0, 0);}
+
+/* assigning properties to the header class */
+.header {
+    font-family: 'Roboto', sans-serif;
+    padding: 1px;
+    text-align: center;
+    background: linear-gradient(#4CB8C4 , #3CD3AD);
+    color: rgb(0, 0, 0);
+    font-size: 8px;
+}
+
+/* assigning properties to the admin1 class */
+.admin1 {
+    /* top: 150px; left: 40px; */
+    position: absolute;
+    overflow:auto;
+    top:30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    white-space: pre-wrap;
+    line-height: 70px;
+    font-size: 48px;
+    background: linear-gradient(#4CB8C4 , #3CD3AD);
+    background-clip : text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+input{
+    text-align:center;
+  }
+
+  /* assigning properties to the name class */
+.name {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    width: 200px;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%);       
+    border-radius: 10px;
+    display: block;
+    border: none;
+    outline: none;
+    position: absolute;
+    overflow:auto;
+    top: 39%;
+    left: 30%;
+}
+
+/* assigning properties to the team class */
+.team {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    width: 200px;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%);        
+    border-radius: 10px;
+    display: block;
+    border: none;
+    outline: none;
+    position: absolute;
+    overflow:auto;
+    top: 39%;
+    left: 50%;
+}
+
+/* assigning properties to the position class */
+.position {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    width: 200px;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%);        
+    border-radius: 10px;
+    display: block;
+    border: none;
+    outline: none;
+    position: absolute;
+    overflow:auto;
+    top: 48%;
+    left: 30%;
+}
+
+/* assigning properties to the goals class */
+.goals {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    width: 200px;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%);        
+    border-radius: 10px;
+    display: block;
+    border: none;
+    outline: none;
+    position: absolute;
+    overflow:auto;
+    top: 48%;
+    left: 50%;
+}
+
+/* assigning properties to the assists class */
+.assists {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    width: 200px;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%);        
+    border-radius: 10px;
+    display: block;
+    border: none;
+    outline: none;
+    position: absolute;
+    overflow:auto;
+    top: 57%;
+    left: 30%;
+}
+
+/* assigning properties to the trophies class */
+.trophies {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    width: 200px;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%);        
+    border-radius: 10px;
+    display: block;
+    border: none;
+    outline: none;
+    position: absolute;
+    overflow:auto;
+    top: 57%;
+    left: 50%;
+}
+
+/* assigning properties to the submit class */
+.submit{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 00;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%); 
+    border-radius: 10px;
+    padding: 20px 266px;
+    position: absolute;
+    overflow:auto;
+    top: 68%;
+    left: 30.7%;
+    line-height: 10%;
+    border: none;
+    outline: none;
+  }
+
+
+::placeholder {
+  color: black;
+  }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  input:focus{
+    background-color: transparent; /* or any other color you want when user starts typing in input */
+}
