@@ -1,5 +1,6 @@
 body {background-color: rgb(0, 0, 0);}
 
+/* assigning properties to the header class*/
 .header {
   font-family: 'Roboto', sans-serif;
   padding: 1px;
@@ -9,6 +10,7 @@ body {background-color: rgb(0, 0, 0);}
   font-size: 8px;
 }
 
+/* assigning properties to the text1 class */
 .text1 {
     /* top: 150px; left: 40px; */
     position: fixed;
@@ -25,6 +27,7 @@ body {background-color: rgb(0, 0, 0);}
     -webkit-background-clip: text;
 }
 
+/* assigning properties to the paragraph class */
 .paragraph{
     letter-spacing: 1.5px;
     position: fixed;
@@ -40,9 +43,12 @@ body {background-color: rgb(0, 0, 0);}
     -webkit-background-clip: text;
 }
 
+/* setting the color of the admin button */
 .admin-button {
   background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)
 }
+
+/* assigning properties to the admin-button class */
 .admin-button {
   font-family: 'Roboto', sans-serif;
   margin: 10px;
@@ -59,12 +65,14 @@ body {background-color: rgb(0, 0, 0);}
   left: 40%;
 }
 
+/* hovering button effect inspired by: https://codepen.io/nadiannis/details/BayJpjo */
 .admin-button:hover {
   background-position: right center; /* change the direction of the change here */
   text-decoration: none;
   transform: scale(1.05);
 }
 
+/*same as the admin-button*/
 .guest-button {
   background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)
 }
