@@ -1,1 +1,6 @@
+mysql_host: 'localhost'
+mysql_user: 'root'
 
+# Enter your password below and the database
+mysql_password: ''
+mysql_db: ''
