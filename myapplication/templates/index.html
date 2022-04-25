@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- setting the required refereneces and stylesheets -->
     <link rel="stylesheet" href="static\main.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,15 +12,18 @@
 </head>
 <body>
 
+    <!-- creating a class called header which contains a h1 tag-->
     <div class="header">
         <h1>Landing Page</h1>
     </div>
 
+    <!-- form which contains the method post and route /,  with two buttons which are submit types-->
     <form method="post" action="/">
         <input type="submit" class="admin-button" value="Admin" name="Admin"/>
         <input type="submit" class="guest-button" value="Guest" name="Guest"/>
     </form>
 
+    <!-- h1 and p tag which are description based tags -->
     <h1 class="text1">Soccer Statistics Database</h1>
     <p1 class="paragraph">LOGIN AS AN ADMIN OR CONTINUE AS A GUEST</p1>
     
