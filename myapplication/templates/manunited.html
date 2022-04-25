@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- setting the required refereneces and stylesheets -->
     <link rel="stylesheet" href="static\combined.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,11 +13,12 @@
 
 </head>
 <body>
-
+    <!-- creating a class called header which contains a h1 tag-->
     <div class="header">
         <h1>Manchester United</h1>
     </div>
 
+    <!-- creating a table where the header and datacells are manually entered-->
     <table class="teamTable">
         <tr>
             <th>Club Name</th>
@@ -35,7 +38,8 @@
         </tr>
 
     <table>
-
+    
+    <!-- creating a table where the data cells are populated through the mysql connection -->
     <table class="playerTable">
         <tr>
             <th>Player Name</th>
@@ -44,7 +48,6 @@
             <th>Total Goals</th>
             <th> Total Assists</th>
             <th>Team Trophies</th>
-            <th>Individual Awards</th>
         </tr>
         {% for user in userDetails %}
         <tr>
@@ -54,7 +57,6 @@
             <td>{{user[4]}}</td>
             <td>{{user[5]}}</td>
             <td>{{user[6]}}</td>
-            <td>{{user[7]}}</td>
         </tr>
         {% endfor %}
     <table>
